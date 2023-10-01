@@ -1,210 +1,173 @@
-body{
-  background-color: rgb(36, 36, 36);
+*{
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
-
-.navbar{
-  background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  height: 85px;
-  border: 2px solid black;
-  border-top: none;
-  border-left: none;
-  border-right:none ;
-  position: inherit;
+body{
+  background-color:#680101;
 }
-
-
-.nav-title img{
-  height: 70px;
-  padding-top: 7px;
-  padding-left: 9px;
-}
-
-.nav-links ul{
-  margin: 0;
-  padding: 10px;
-  display: flex;
-}
-
-.nav-links li {
-  list-style: none;
-  padding-left: 10px;
-  padding-right: 0;
-}
-
-.nav-links a{
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  display: block;
-  font-family:monospace;
-  font-size: 17px;
-  font-weight: 800;
-  border: 2px solid rgb(255, 255, 255) ;
-  border-radius: 4px;
-}
-
-
-
-.burger-menu{
-  padding-top: 6px;
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.burger-menu .bar{
-  height: 3px;
+.header{
+  font-family: 'Russo One', sans-serif;
   width: 100%;
-  background-color: white;
-  border-radius: 15px;
+  height: 500px;
+  background-image: url(images/spiderman-3.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-bottom: 100px;
+  justify-content: center;
+  background-repeat: no-repeat;
 }
 
-.nav-links a:hover{
-  background-color: white;
-  color: red;
+nav{
+  display: flex;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  align-items: center;
+  justify-content: space-between;
 }
 
+nav img{
+  width: 300px;
+}
 
-/* slider from chatgpt */
+.nav-links{
+  flex: 1;
+  text-align: right;
+  padding-bottom: 20px;
 
+}
 
-.slider {
-  overflow-x: hidden;
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding-left: 16px;
+  padding-right: 16px;
   position: relative;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-}
-
-.slides img {
-  width: 100%;
-  height: auto;
-}
-
-
-
-
-.title-wrapper{
-  position:relative;
-  width: 100%;
-  left: 2rem;
-  bottom: 16rem;
-  padding: 150px 3px;
-}
-
-.title-of-the-actor{
+.nav-links a{
   color: white;
-  font-size: 20px;
-  font-family: cursive;
-}
-.title-of-the-actor span{
-  text-decoration: underline;
-}
-.watch-now-button{
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  color: white;
-  width: fit-content;
-  background-color: rgb(255, 0, 0);
-  border-radius: 1px;
-  border: none;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 2px;
-  padding-bottom: 6px;
   text-decoration: none;
-}
-.wrapper-button{
-padding-left: 130px;}
-.watch-now-button:hover{
-  background-color: rgb(255, 86, 86);
+  font-family: 'Russo One', sans-serif;
+  font-size: larger;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 700px){
-  .burger-menu{
-    display: flex;
-    padding-top: 18px;
-  }
-
-  .nav-links{
-    display: none;
-    padding: 0;
-    margin: 0;
-    height: 440px;
-    top: auto;
-  }
-
-.navbar li {
-  width: 180%;
+.nav-links ul li ::after{
+  content: '';
+  width: 0%;
+  height: 2px;
   background-color: red;
-  padding: 0;
-
-  }
-  .nav-links a{
-    font-size: 15px;
-    border: none;
-    border-radius: 0;
-  }
-  .nav-links ul {
-    flex-direction: column;
-    padding: 41px;
-    padding-top: 262px;
-    align-items: center;
-    width: 100%;
-  }
-
-
-  .nav-links.active{
-    display: flex;
-  }
-
+  display: block;
+  margin: auto;
+  transition: 0.2s;
 }
+.nav-links ul li:hover ::after{
+  width: 100%;
+}
+
+.nav-links li:hover{
+  transform: translateY(-2px);
+  transition-duration: 0.3s;
+}
+
+.discription{
+  transform: translateY(-10px);
+}
+
+.text-box{
+  transform: translateY(400%);
+  color: #fff;
+  padding-left: 20px;
+  font-size: 15px;
+  font-family: 'Rubik Mono One', sans-serif;
+  z-index: 1;
+}
+
+.text-box .span1{
+  font-size: 45px;
+}
+
+
+.watch-now-button{
+  padding-left: 34vh;
+  font-size: x-large;
+  transform: translateY(370%);
+  size: 0;
+  z-index: 1;
+  position: absolute;
+}
+
+
+
+.watch-now-button button{
+  background-color: #7D7463;
+  border: none;
+  border-radius: 1vh;
+  height: 65px;
+  width: 190px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Russo One', sans-serif;
+  z-index: 1;
+}
+
+.watch-now-button button:hover{
+  transition-duration: 0.26s;
+  transform: translateY(-1.3px);
+  background-color: #ffa600;
+}
+
+.spider-man-img img{
+  transform: translateY(-530px);
+  z-index: 1;
+}
+
+
+.spider-man-infos{
+  color: white;
+  font-family:fantasy;
+  font-size: large;
+  transform: translateY(-70pc);
+  padding-left: 800px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
